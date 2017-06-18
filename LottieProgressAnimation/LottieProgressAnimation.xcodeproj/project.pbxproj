@@ -18,6 +18,8 @@
 		D965A3711EF6DF10008BAB21 /* LottieProgressAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A3701EF6DF10008BAB21 /* LottieProgressAnimationTests.swift */; };
 		D965A37C1EF6E0CD008BAB21 /* circular_graph.json in Resources */ = {isa = PBXBuildFile; fileRef = D965A37B1EF6E0CD008BAB21 /* circular_graph.json */; };
 		D965A3801EF7054D008BAB21 /* circular_graph_with_check.json in Resources */ = {isa = PBXBuildFile; fileRef = D965A37F1EF7054D008BAB21 /* circular_graph_with_check.json */; };
+		D965A3861EF72762008BAB21 /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A3851EF72762008BAB21 /* CountingLabel.swift */; };
+		D965A3881EF7279D008BAB21 /* ProgressAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A3871EF7279D008BAB21 /* ProgressAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		D965A3721EF6DF10008BAB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D965A37B1EF6E0CD008BAB21 /* circular_graph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circular_graph.json; path = LottieAnimation/circular_graph.json; sourceTree = SOURCE_ROOT; };
 		D965A37F1EF7054D008BAB21 /* circular_graph_with_check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circular_graph_with_check.json; path = LottieAnimation/circular_graph_with_check.json; sourceTree = SOURCE_ROOT; };
+		D965A3851EF72762008BAB21 /* CountingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
+		D965A3871EF7279D008BAB21 /* ProgressAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,15 +119,13 @@
 		D965A3581EF6DF10008BAB21 /* LottieProgressAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				D965A37F1EF7054D008BAB21 /* circular_graph_with_check.json */,
-				D965A37B1EF6E0CD008BAB21 /* circular_graph.json */,
 				D965A3591EF6DF10008BAB21 /* AppDelegate.swift */,
+				D965A3851EF72762008BAB21 /* CountingLabel.swift */,
 				D965A35B1EF6DF10008BAB21 /* FirstViewController.swift */,
+				D965A3871EF7279D008BAB21 /* ProgressAnimation.swift */,
 				D965A35D1EF6DF10008BAB21 /* SecondViewController.swift */,
-				D965A35F1EF6DF10008BAB21 /* Main.storyboard */,
-				D965A3621EF6DF10008BAB21 /* Assets.xcassets */,
-				D965A3641EF6DF10008BAB21 /* LaunchScreen.storyboard */,
-				D965A3671EF6DF10008BAB21 /* Info.plist */,
+				D965A3841EF7274F008BAB21 /* Lottie Json */,
+				D965A3831EF72744008BAB21 /* Support Files */,
 			);
 			path = LottieProgressAnimation;
 			sourceTree = "<group>";
@@ -135,6 +137,26 @@
 				D965A3721EF6DF10008BAB21 /* Info.plist */,
 			);
 			path = LottieProgressAnimationTests;
+			sourceTree = "<group>";
+		};
+		D965A3831EF72744008BAB21 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D965A35F1EF6DF10008BAB21 /* Main.storyboard */,
+				D965A3621EF6DF10008BAB21 /* Assets.xcassets */,
+				D965A3641EF6DF10008BAB21 /* LaunchScreen.storyboard */,
+				D965A3671EF6DF10008BAB21 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		D965A3841EF7274F008BAB21 /* Lottie Json */ = {
+			isa = PBXGroup;
+			children = (
+				D965A37F1EF7054D008BAB21 /* circular_graph_with_check.json */,
+				D965A37B1EF6E0CD008BAB21 /* circular_graph.json */,
+			);
+			name = "Lottie Json";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D965A35E1EF6DF10008BAB21 /* SecondViewController.swift in Sources */,
+				D965A3861EF72762008BAB21 /* CountingLabel.swift in Sources */,
+				D965A3881EF7279D008BAB21 /* ProgressAnimation.swift in Sources */,
 				D965A35A1EF6DF10008BAB21 /* AppDelegate.swift in Sources */,
 				D965A35C1EF6DF10008BAB21 /* FirstViewController.swift in Sources */,
 			);

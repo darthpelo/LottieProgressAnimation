@@ -1,3 +1,4 @@
+
 //
 //  SecondViewController.swift
 //  LottieProgressAnimation
@@ -13,6 +14,8 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var bigViewContainer: UIView!
     @IBOutlet weak var smallViewContainer: UIView!
+    @IBOutlet weak var valueBigLabel: CountingLabel!
+    @IBOutlet weak var valueSmallLabel: CountingLabel!
     
     weak var bigAnimationView: LOTAnimationView?
     weak var smallAnimationView: LOTAnimationView?
@@ -28,21 +31,23 @@ class SecondViewController: UIViewController {
         let progressBig = ProgressAnimation()
         let progressSmall = ProgressAnimation()
         
+        valueBigLabel.count(fromValue: 0, to: 2678, withDuration: 1.5, andAnimationType: .easeOut, andCountingType: .int)
         progressBig.start(from: 0.0,
                           to: Float(2678.0/10000.0),
                           duration: 1.5,
-                          animation: .EaseOut) { (progress) in
+                          animation: .easeOut) { (progress) in
                             self.updateBig(progress: progress)
         }
-        
+        valueSmallLabel.count(fromValue: 0, to: 6000, withDuration: 1.5, andAnimationType: .easeOut, andCountingType: .int)
         progressSmall.start(from: 0.0,
                             to: Float(6000.0/8000.0),
                             duration: 1.5,
-                            animation: .EaseOut) { (progress) in
+                            animation: .easeOut) { (progress) in
                                 self.updateSmall(progress: progress)
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
+             self.valueSmallLabel.count(fromValue: 0, to: 8000, withDuration: 1.5, andAnimationType: .easeOut, andCountingType: .int)
             self.smallAnimationView?.isHidden = true
             self.checkSmallAnimationView?.isHidden = false
             self.checkSmallAnimationView?.play()
@@ -67,6 +72,7 @@ class SecondViewController: UIViewController {
         self.bigAnimationView?.loopAnimation = false
         if let anim = bigAnimationView {
             bigViewContainer.addSubview(anim)
+            bigViewContainer.bringSubview(toFront: valueBigLabel)
         }
         
     }
@@ -88,6 +94,7 @@ class SecondViewController: UIViewController {
         self.smallAnimationView?.loopAnimation = false
         if let anim = smallAnimationView {
             smallViewContainer.addSubview(anim)
+            smallViewContainer.bringSubview(toFront: valueSmallLabel)
         }
     }
     
