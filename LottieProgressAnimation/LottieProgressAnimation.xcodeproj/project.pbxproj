@@ -16,8 +16,8 @@
 		D965A3631EF6DF10008BAB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D965A3621EF6DF10008BAB21 /* Assets.xcassets */; };
 		D965A3661EF6DF10008BAB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D965A3641EF6DF10008BAB21 /* LaunchScreen.storyboard */; };
 		D965A3711EF6DF10008BAB21 /* LottieProgressAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A3701EF6DF10008BAB21 /* LottieProgressAnimationTests.swift */; };
-		D965A37C1EF6E0CD008BAB21 /* circular_graph_big.json in Resources */ = {isa = PBXBuildFile; fileRef = D965A37B1EF6E0CD008BAB21 /* circular_graph_big.json */; };
-		D965A37E1EF6EB6C008BAB21 /* circular_graph_small.json in Resources */ = {isa = PBXBuildFile; fileRef = D965A37D1EF6EB6C008BAB21 /* circular_graph_small.json */; };
+		D965A37C1EF6E0CD008BAB21 /* circular_graph.json in Resources */ = {isa = PBXBuildFile; fileRef = D965A37B1EF6E0CD008BAB21 /* circular_graph.json */; };
+		D965A3801EF7054D008BAB21 /* circular_graph_with_check.json in Resources */ = {isa = PBXBuildFile; fileRef = D965A37F1EF7054D008BAB21 /* circular_graph_with_check.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,8 @@
 		D965A36C1EF6DF10008BAB21 /* LottieProgressAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottieProgressAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D965A3701EF6DF10008BAB21 /* LottieProgressAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieProgressAnimationTests.swift; sourceTree = "<group>"; };
 		D965A3721EF6DF10008BAB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D965A37B1EF6E0CD008BAB21 /* circular_graph_big.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circular_graph_big.json; path = LottieAnimation/circular_graph_big.json; sourceTree = SOURCE_ROOT; };
-		D965A37D1EF6EB6C008BAB21 /* circular_graph_small.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circular_graph_small.json; path = LottieAnimation/circular_graph_small.json; sourceTree = SOURCE_ROOT; };
+		D965A37B1EF6E0CD008BAB21 /* circular_graph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circular_graph.json; path = LottieAnimation/circular_graph.json; sourceTree = SOURCE_ROOT; };
+		D965A37F1EF7054D008BAB21 /* circular_graph_with_check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circular_graph_with_check.json; path = LottieAnimation/circular_graph_with_check.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +115,8 @@
 		D965A3581EF6DF10008BAB21 /* LottieProgressAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				D965A37D1EF6EB6C008BAB21 /* circular_graph_small.json */,
-				D965A37B1EF6E0CD008BAB21 /* circular_graph_big.json */,
+				D965A37F1EF7054D008BAB21 /* circular_graph_with_check.json */,
+				D965A37B1EF6E0CD008BAB21 /* circular_graph.json */,
 				D965A3591EF6DF10008BAB21 /* AppDelegate.swift */,
 				D965A35B1EF6DF10008BAB21 /* FirstViewController.swift */,
 				D965A35D1EF6DF10008BAB21 /* SecondViewController.swift */,
@@ -228,11 +228,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D965A3801EF7054D008BAB21 /* circular_graph_with_check.json in Resources */,
 				D965A3661EF6DF10008BAB21 /* LaunchScreen.storyboard in Resources */,
 				D965A3631EF6DF10008BAB21 /* Assets.xcassets in Resources */,
-				D965A37C1EF6E0CD008BAB21 /* circular_graph_big.json in Resources */,
+				D965A37C1EF6E0CD008BAB21 /* circular_graph.json in Resources */,
 				D965A3611EF6DF10008BAB21 /* Main.storyboard in Resources */,
-				D965A37E1EF6EB6C008BAB21 /* circular_graph_small.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,51 +17,33 @@ enum AnimationType {
 }
 
 class FirstViewController: UIViewController {
-
+    
     @IBOutlet weak var viewContainer: UIView!
     
     weak var animationView: LOTAnimationView?
-    
-    let kCounterRate: Float = 3.0
-    
-    var start: Float = 0.0
-    var end: Float = 0.0
-    var timer: Timer?
-    var progress: TimeInterval!
-    var lastUpdate: TimeInterval!
-    var duration: TimeInterval!
-    var animationType: AnimationType = .EaseInOut
-    var currentValue: Float {
-        if (progress >= duration) {
-            return end
-        }
-        let percent = Float(progress / duration)
-        return (start + (update(counter: percent) * (end - start)))
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         setupLottieView()
         
-        progress = 0.0
-        duration = 1.5
-        lastUpdate = Date.timeIntervalSinceReferenceDate
-        end = Float(5000.0/10000.0)
+        let progress = ProgressAnimation()
         
-        timer = Timer.scheduledTimer(timeInterval: 0.01,
-                                     target: self,
-                                     selector: #selector(updateAnimation),
-                                     userInfo: nil,
-                                     repeats: true)
+        progress.start(from: 0.0,
+                       to: Float(5000.0/10000.0),
+                       duration: 1.5,
+                       animation: .EaseOut) { (progress) in
+                        self.update(progress: progress)
+        }
+        
     }
-
+    
     private func setupLottieView() {
         // MARK : Lottie
         if let _ = self.animationView {
             viewContainer.willRemoveSubview(self.animationView!)
         }
-        guard let animationView = LOTAnimationView(name: "circular_graph_big") else {
+        guard let animationView = LOTAnimationView(name: "circular_graph") else {
             return
         }
         animationView.frame = CGRect(x: 0,
@@ -75,7 +57,54 @@ class FirstViewController: UIViewController {
     }
     
     // MARK: - Private
-    func updateAnimation() {
+    
+    private func update(progress value: Float) {
+        animationView?.animationProgress = CGFloat(value)
+    }
+    
+}
+
+class ProgressAnimation {
+    private let kCounterRate: Float = 3.0
+    
+    private var start: Float = 0.0
+    private var end: Float = 0.0
+    private var timer: Timer?
+    private var progress: TimeInterval!
+    private var lastUpdate: TimeInterval!
+    private var duration: TimeInterval!
+    private var animationType: AnimationType = .EaseInOut
+    private var currentValue: Float {
+        if (progress >= duration) {
+            return end
+        }
+        let percent = Float(progress / duration)
+        return (start + (update(counter: percent) * (end - start)))
+    }
+    
+    private var updateCallback: ((Float) -> Void)?
+    
+    func start(from: Float,
+               to: Float,
+               duration: TimeInterval,
+               animation type: AnimationType,
+               update: ((Float) -> Void)?) {
+        progress = 0.0
+        self.duration = duration
+        lastUpdate = Date.timeIntervalSinceReferenceDate
+        start = from
+        end = to
+        
+        self.updateCallback = update
+        
+        timer = Timer.scheduledTimer(timeInterval: 0.01,
+                                     target: self,
+                                     selector: #selector(updateAnimation),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+    
+    @objc func updateAnimation() {
         // Update the progress
         let now = Date.timeIntervalSinceReferenceDate
         progress = progress + (now - lastUpdate)
@@ -87,23 +116,15 @@ class FirstViewController: UIViewController {
             progress = duration
         }
         
-        update(progress: currentValue)
+        updateCallback?(currentValue)
     }
     
-    func update(progress value: Float) {
-        if value <= 0.5 {
-            self.animationView?.animationProgress = CGFloat(value)
-        } else {
-            self.animationView?.animationProgress = 1
-        }
-    }
-    
-    func killTimer() {
+    private func killTimer() {
         timer?.invalidate()
         timer = nil
     }
     
-    func update(counter t: Float) -> Float {
+    private func update(counter t: Float) -> Float {
         switch animationType {
         case .Linear:
             return t

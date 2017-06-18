@@ -74,14 +74,24 @@
                                     <constraint firstAttribute="width" constant="84" id="3JU-dq-15i"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-mm-TAg">
+                                <rect key="frame" x="145" y="436" width="84" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RRD-mm-TAg" secondAttribute="height" multiplier="1:1" id="iiu-Rz-2Ja"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="RRD-mm-TAg" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="5Yw-Pk-yM3"/>
+                            <constraint firstItem="RRD-mm-TAg" firstAttribute="top" secondItem="j7j-tH-E0C" secondAttribute="bottom" constant="60.5" id="CXn-Dz-gTN"/>
                             <constraint firstItem="IVS-LW-aAW" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="CYB-07-AAg"/>
                             <constraint firstItem="IVS-LW-aAW" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="Efs-vz-qKV"/>
                             <constraint firstItem="j7j-tH-E0C" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="Nyh-42-U24"/>
                             <constraint firstItem="j7j-tH-E0C" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ixy-NE-il4"/>
                             <constraint firstItem="j7j-tH-E0C" firstAttribute="top" secondItem="IVS-LW-aAW" secondAttribute="bottom" constant="86" id="oAY-XT-CH8"/>
+                            <constraint firstItem="RRD-mm-TAg" firstAttribute="width" secondItem="j7j-tH-E0C" secondAttribute="width" id="tAD-rX-CFh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
