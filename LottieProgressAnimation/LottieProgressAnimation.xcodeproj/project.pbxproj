@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A3F8AC1A6ADE88FDF8EF1DB /* Pods_LottieProgressAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D516479AF1DE04F24905C13A /* Pods_LottieProgressAnimation.framework */; };
 		67051B9DA854991AC2203A8C /* Pods_LottieProgressAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C155E74B2AC3DFB0A9170509 /* Pods_LottieProgressAnimationTests.framework */; };
+		D935C6931F037DFF008452A2 /* LottiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D935C6921F037DFF008452A2 /* LottiView.swift */; };
 		D965A35A1EF6DF10008BAB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A3591EF6DF10008BAB21 /* AppDelegate.swift */; };
 		D965A35C1EF6DF10008BAB21 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A35B1EF6DF10008BAB21 /* FirstViewController.swift */; };
 		D965A35E1EF6DF10008BAB21 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965A35D1EF6DF10008BAB21 /* SecondViewController.swift */; };
@@ -39,6 +40,7 @@
 		B2D597691307A1A7EE0C5772 /* Pods-LottieProgressAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieProgressAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LottieProgressAnimation/Pods-LottieProgressAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 		C155E74B2AC3DFB0A9170509 /* Pods_LottieProgressAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieProgressAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D516479AF1DE04F24905C13A /* Pods_LottieProgressAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieProgressAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D935C6921F037DFF008452A2 /* LottiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottiView.swift; sourceTree = "<group>"; };
 		D965A3561EF6DF10008BAB21 /* LottieProgressAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieProgressAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D965A3591EF6DF10008BAB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D965A35B1EF6DF10008BAB21 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				D965A3591EF6DF10008BAB21 /* AppDelegate.swift */,
 				D965A3851EF72762008BAB21 /* CountingLabel.swift */,
 				D965A35B1EF6DF10008BAB21 /* FirstViewController.swift */,
+				D935C6921F037DFF008452A2 /* LottiView.swift */,
 				D965A3871EF7279D008BAB21 /* ProgressAnimation.swift */,
 				D965A35D1EF6DF10008BAB21 /* SecondViewController.swift */,
 				D965A3841EF7274F008BAB21 /* Lottie Json */,
@@ -370,6 +373,7 @@
 				D965A3881EF7279D008BAB21 /* ProgressAnimation.swift in Sources */,
 				D965A35A1EF6DF10008BAB21 /* AppDelegate.swift in Sources */,
 				D965A35C1EF6DF10008BAB21 /* FirstViewController.swift in Sources */,
+				D935C6931F037DFF008452A2 /* LottiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

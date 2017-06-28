@@ -35,21 +35,10 @@ class FirstViewController: UIViewController {
     
     private func setupLottieView() {
         // MARK : Lottie
-        if let _ = self.animationView {
-            viewContainer.willRemoveSubview(self.animationView!)
+        if animationView == nil {
+            animationView = LottieView.addAnimation(withName: "circular_graph", to: viewContainer)
+            viewContainer.bringSubview(toFront: valueLabel)
         }
-        guard let animationView = LOTAnimationView(name: "circular_graph") else {
-            return
-        }
-        animationView.frame = CGRect(x: 0,
-                                     y: 0,
-                                     width: viewContainer.frame.size.width,
-                                     height: viewContainer.frame.size.height)
-        self.animationView = animationView
-        self.animationView?.contentMode = .scaleAspectFit
-        self.animationView?.loopAnimation = false
-        viewContainer.addSubview(animationView)
-        viewContainer.bringSubview(toFront: valueLabel)
     }
     
     // MARK: - Private
