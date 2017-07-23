@@ -8,16 +8,24 @@
 
 import Foundation
 
+public enum AnimationType {
+    case linear
+    case easeIn
+    case easeOut
+    case easeInOut
+}
+
 class ProgressAnimation {
     private let kCounterRate: Float = 3.0
-    
     private var start: Float = 0.0
     private var end: Float = 0.0
+    private var animationType: AnimationType = .easeInOut
+    
     private var timer: Timer?
     private var progress: TimeInterval!
     private var lastUpdate: TimeInterval!
     private var duration: TimeInterval!
-    private var animationType: AnimationType = .easeInOut
+    
     private var currentValue: Float {
         if (progress >= duration) {
             return end
@@ -39,7 +47,7 @@ class ProgressAnimation {
         start = from
         end = to
         
-        self.updateCallback = update
+        updateCallback = update
         
         timer = Timer.scheduledTimer(timeInterval: 0.01,
                                      target: self,
@@ -48,7 +56,8 @@ class ProgressAnimation {
                                      repeats: true)
     }
     
-    @objc func updateAnimation() {
+    // MARK: - Private
+    @objc fileprivate func updateAnimation() {
         // Update the progress
         let now = Date.timeIntervalSinceReferenceDate
         progress = progress + (now - lastUpdate)

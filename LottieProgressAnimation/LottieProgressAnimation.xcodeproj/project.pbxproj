@@ -122,12 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				D965A3591EF6DF10008BAB21 /* AppDelegate.swift */,
-				D965A3851EF72762008BAB21 /* CountingLabel.swift */,
-				D965A35B1EF6DF10008BAB21 /* FirstViewController.swift */,
-				D935C6921F037DFF008452A2 /* LottiView.swift */,
-				D965A3871EF7279D008BAB21 /* ProgressAnimation.swift */,
-				D965A35D1EF6DF10008BAB21 /* SecondViewController.swift */,
+				D9B80F481F249FEB000FEE6A /* Example */,
 				D965A3841EF7274F008BAB21 /* Lottie Json */,
+				D9B80F491F249FF4000FEE6A /* ProgressAnimation */,
 				D965A3831EF72744008BAB21 /* Support Files */,
 			);
 			path = LottieProgressAnimation;
@@ -160,6 +157,25 @@
 				D965A37B1EF6E0CD008BAB21 /* circular_graph.json */,
 			);
 			name = "Lottie Json";
+			sourceTree = "<group>";
+		};
+		D9B80F481F249FEB000FEE6A /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				D965A3851EF72762008BAB21 /* CountingLabel.swift */,
+				D965A35B1EF6DF10008BAB21 /* FirstViewController.swift */,
+				D965A35D1EF6DF10008BAB21 /* SecondViewController.swift */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		D9B80F491F249FF4000FEE6A /* ProgressAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				D935C6921F037DFF008452A2 /* LottiView.swift */,
+				D965A3871EF7279D008BAB21 /* ProgressAnimation.swift */,
+			);
+			name = ProgressAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

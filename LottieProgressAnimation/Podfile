@@ -6,7 +6,7 @@ target 'LottieProgressAnimation' do
   use_frameworks!
 
   # Pods for LottieProgressAnimation
-  pod 'lottie-ios'
+  pod 'lottie-ios', '1.5.1'
 
   target 'LottieProgressAnimationTests' do
     inherit! :search_paths

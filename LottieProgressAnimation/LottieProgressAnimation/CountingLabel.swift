@@ -8,13 +8,6 @@
 import Foundation
 import UIKit
 
-public enum AnimationType {
-    case linear
-    case easeIn
-    case easeOut
-    case easeInOut
-}
-
 public enum CountingType {
     case int
     case float
