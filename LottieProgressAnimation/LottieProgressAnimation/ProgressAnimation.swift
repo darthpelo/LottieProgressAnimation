@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias UpdateProgress = ((Float) -> Void)
+
 public enum AnimationType {
     case linear
     case easeIn
@@ -31,16 +33,16 @@ class ProgressAnimation {
             return end
         }
         let percent = Float(progress / duration)
-        return (start + (update(counter: percent) * (end - start)))
+        return start + (update(counter: percent) * (end - start))
     }
     
-    private var updateCallback: ((Float) -> Void)?
+    private var updateCallback: UpdateProgress?
     
     func start(from: Float,
                to: Float,
                duration: TimeInterval,
                animation type: AnimationType,
-               update: ((Float) -> Void)?) {
+               update: UpdateProgress?) {
         progress = 0.0
         self.duration = duration
         lastUpdate = Date.timeIntervalSinceReferenceDate
